@@ -1,6 +1,6 @@
 ## Interface: 11501
 ## Version: 1.0.0
 ## Title: TargetHealth
-## Notes: Show target health
+## Notes: Show target health and power
 
 main.lua
