@@ -79,7 +79,7 @@ local function UpdatePower()
   local maxValue = UnitPowerMax("target")
   
   if maxValue > 0 then
-      local value = UnitPower("target")
+    local value = UnitPower("target")
     powerTextFrame:SetText(format("%s / %s", FormatNumber(value), FormatNumber(maxValue)))
   else
     powerTextFrame:Hide()
