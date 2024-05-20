@@ -18,6 +18,7 @@ local frame = CreateFrame("Frame")
 frame:RegisterEvent("UNIT_HEALTH");
 frame:RegisterEvent("UNIT_POWER_FREQUENT");
 frame:RegisterEvent("PLAYER_TARGET_CHANGED");
+frame:RegisterEvent("PLAYER_ENTERING_WORLD")
 
 local healthTextFrame = frame:CreateFontString(nil, "BORDER", "TextStatusBarText")
 healthTextFrame:SetTextScale(0.9)
@@ -104,7 +105,7 @@ local function HandleUnitEvent(unit)
 end
 
 local EventHandler = function(self, event, arg1, ...)
-  if event == "PLAYER_TARGET_CHANGED" then
+  if event == "PLAYER_TARGET_CHANGED" or event == "PLAYER_ENTERING_WORLD" then
     Update()
   elseif event == "UNIT_HEALTH" or event == "UNIT_POWER_FREQUENT" then
     HandleUnitEvent(arg1)
