@@ -20,13 +20,15 @@ frame:RegisterEvent("UNIT_POWER_FREQUENT");
 frame:RegisterEvent("PLAYER_TARGET_CHANGED");
 frame:RegisterEvent("PLAYER_ENTERING_WORLD")
 
+local textScale = UIParent:GetScale()
+
 local healthTextFrame = frame:CreateFontString(nil, "BORDER", "TextStatusBarText")
-healthTextFrame:SetTextScale(0.9)
+healthTextFrame:SetTextScale(textScale)
 healthTextFrame:SetPoint("CENTER", _G["TargetFrameHealthBar"], "CENTER", 0, 0)
 healthTextFrame:Hide()
 
 local powerTextFrame = frame:CreateFontString(nil, "BORDER", "TextStatusBarText")
-powerTextFrame:SetTextScale(0.9)
+powerTextFrame:SetTextScale(textScale)
 powerTextFrame:SetPoint("CENTER", _G["TargetFrameManaBar"], "CENTER", 0, 0)
 powerTextFrame:Hide()
 
