@@ -1,5 +1,5 @@
 --[[ 
-    Copyright 2024 Lounek
+    Copyright 2024-2025 Lounek
     
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@ frame:RegisterEvent("UNIT_POWER_FREQUENT");
 frame:RegisterEvent("PLAYER_TARGET_CHANGED");
 frame:RegisterEvent("PLAYER_ENTERING_WORLD")
 
-local textScale = UIParent:GetScale()
+local textScale = C_CVar.GetCVar("uiScale")
 
 local healthTextFrame = frame:CreateFontString(nil, "BORDER", "TextStatusBarText")
 healthTextFrame:SetTextScale(textScale)
